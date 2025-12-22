@@ -1,9 +1,10 @@
 package com.daonq1408.springbootsetup.service.inter;
 
-import java.util.List;
 import com.daonq1408.springbootsetup.dto.request.v1.BrandRequest;
 import com.daonq1408.springbootsetup.dto.response.v1.BrandResponse;
 import com.daonq1408.springbootsetup.entity.Brand;
+
+import java.util.List;
 
 public interface BrandService {
     Brand getBrandById(long brandId);

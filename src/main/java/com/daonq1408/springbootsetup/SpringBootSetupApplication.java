@@ -2,6 +2,7 @@ package com.daonq1408.springbootsetup;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import com.daonq1408.springbootsetup.config.DotEnvConfig;
 
 @SpringBootApplication
@@ -11,5 +12,4 @@ public class SpringBootSetupApplication {
         DotEnvConfig.loadEnv();
         SpringApplication.run(SpringBootSetupApplication.class, args);
     }
-
 }

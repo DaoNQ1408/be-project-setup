@@ -1,7 +1,7 @@
 package com.daonq1408.springbootsetup.config;
 
-import java.util.Arrays;
 import java.util.List;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
@@ -13,13 +13,12 @@ public class CorsConfig {
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
-
         CorsConfiguration corsConfiguration = new CorsConfiguration();
 
-        corsConfiguration
-                .setAllowedOriginPatterns(List.of("http://localhost:*", "https://example.com"));
+        corsConfiguration.setAllowedOriginPatterns(
+                List.of("http://localhost:*", "https://example.com"));
         corsConfiguration.setAllowedMethods(
-                Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
+                List.of("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
         corsConfiguration.setAllowedHeaders(List.of("*"));
         corsConfiguration.setAllowCredentials(true);
 

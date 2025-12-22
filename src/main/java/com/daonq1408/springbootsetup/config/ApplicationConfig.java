@@ -10,7 +10,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+
 import com.daonq1408.springbootsetup.repository.UserRepository;
+
 import lombok.RequiredArgsConstructor;
 
 @Configuration
@@ -21,8 +23,14 @@ public class ApplicationConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
-        return username -> userRepository.findByMail(username).orElseThrow(
-                () -> new UsernameNotFoundException("User not found with email: " + username));
+        return username ->
+                userRepository
+                        .findByMail(username)
+                        .orElseThrow(() ->
+                                new UsernameNotFoundException(
+                                        "User not found with email: " + username
+                                )
+                        );
     }
 
     @Bean
@@ -42,8 +50,9 @@ public class ApplicationConfig {
     }
 
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration config)
-            throws Exception {
+    public AuthenticationManager authenticationManager(
+            AuthenticationConfiguration config
+    ) throws Exception {
         return config.getAuthenticationManager();
     }
 }
