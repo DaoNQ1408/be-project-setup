@@ -8,9 +8,9 @@
         <version>3.5.7</version>
         <relativePath/> </parent>
     <groupId>com.daonq1408</groupId>
-    <artifactId>spring-boot-setup</artifactId>
+    <artifactId>spring-boot-setup-v1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-setup</name>
+    <name>spring-boot-setup-v1</name>
     <description>spring-boot-setup</description>
     <url/>
     <licenses>
